@@ -1,0 +1,6 @@
+{{model.title}} {{model.author}} {{model.genre.name}} {{model.description}} {{model.price}}
+
+{{review-component save='save' book=model}}
+<button{{action 'addToCart' model}}>add to cart</button>
+
+{{update-book deleteBook='deleteBook' book=model}}

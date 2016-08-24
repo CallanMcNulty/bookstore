@@ -1,0 +1,17 @@
+{{#if formVisible}}
+  {{new-book genre=selectedGenre save="save"}}
+{{else}}
+  {{genre-list genres=genres chooseGenre="chooseGenre"}}
+{{/if}}
+
+<ul>
+  {{#each orders as |order|}}
+    <li>
+      {{#each order.bookOrders as |book|}}
+        {{book.book.title}} ${{book.book.price}},
+      {{/each}}
+      total: {{order.total}}
+      <button {{action "ship" order}}>order shipped</button>
+    </li>
+  {{/each}}
+</ul>

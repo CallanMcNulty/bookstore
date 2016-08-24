@@ -1,0 +1,8 @@
+<form>update
+  {{input value=book.title id="title"}}
+  {{input value=book.author id="author"}}
+  {{input value=book.price id="price"}}
+  {{textarea value=book.description id="description"}}
+  <button {{action 'updateBook' book}}>make changes</button>
+  <button {{action 'deleteBook' book}}>delete book</button>
+</form>

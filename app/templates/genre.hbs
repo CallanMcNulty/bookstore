@@ -1,0 +1,4 @@
+<h1>{{model.name}}</h1>
+
+{{#each model.books as |book|}}{{#link-to 'book' book.id}}{{book.title}}{{/link-to}}, by {{book.author}}
+{{/each}}

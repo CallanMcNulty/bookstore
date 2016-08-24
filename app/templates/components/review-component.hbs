@@ -1,0 +1,16 @@
+<ul>{{#each sortedReviews as |review|}}<li>{{review.userName}} {{review.stars}} stars
+{{review.comment}} {{review.date}}</li>{{/each}}
+</ul>
+<form>
+  <label>user name</label>
+  {{input value=userName id="userName"}}
+  <label>stars</label>
+  {{radio-button value='1' checked=selectedStar}}
+  {{radio-button value='2' checked=selectedStar}}
+  {{radio-button value='3' checked=selectedStar}}
+  {{radio-button value='4' checked=selectedStar}}
+  {{radio-button value='5' checked=selectedStar}}
+  <label>Write your review:</label>
+  {{textarea value=comment id="comment"}}
+  <button {{action 'save'}}>submit</button>
+</form>
