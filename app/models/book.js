@@ -7,5 +7,6 @@ export default DS.Model.extend({
   description: DS.attr(),
   genre: DS.belongsTo('genre', {async: true}),
   bookOrders: DS.hasMany('book-order', {async: true}),
-  reviews: DS.hasMany('review', {async: true})
+  reviews: DS.hasMany('review', {async: true}),
+  picture: DS.attr()
 });

@@ -1,10 +1,18 @@
 <h3>New Book</h3>
 <label for="title">Title</label>
 {{input value=title id="title"}}
+<br>
 <label for="author">Author</label>
 {{input value=author id="author"}}
+<br>
 <label for="price">Price</label>
 {{input value=price id="price"}}
+<br>
 <label for="description">Description</label>
+<br>
 {{textarea value=description id="description"}}
-<button {{action "save"}}></button>
+<br>
+<label for="picture">Image</label>
+{{input value=picture id="picture"}}
+<br>
+<button class="btn btn-primary" {{action "save"}}>Add</button>

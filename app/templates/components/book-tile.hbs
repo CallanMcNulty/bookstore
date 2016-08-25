@@ -1,0 +1,12 @@
+{{#if featured}}
+  <div class="row tile center-block">
+    <h2>Why not try...</h2>
+    <div class="tile-col">
+      <h3>{{#link-to "book" chosenBook.id}}{{chosenBook.title}}{{/link-to}}</h3>
+      <h5>By {{chosenBook.author}}</h5>
+    </div>
+    <div class="tile-col">{{#link-to "book" chosenBook.id}}<img src="{{chosenBook.picture}}" alt="book cover" />{{/link-to}}</div>
+  </div>
+{{else}}
+  <div class="tile-col">{{#link-to "book" chosenBook.id}}<img src="{{chosenBook.picture}}" alt="book cover" />{{/link-to}}</div>
+{{/if}}

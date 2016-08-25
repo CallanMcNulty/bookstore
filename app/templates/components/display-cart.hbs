@@ -1,4 +1,10 @@
-{{#each shoppingCart.items as |item|}}
-  {{item.title}} -- {{item.price}}
-{{/each}}
-<button {{action "placeOrder"}}>Place Order</button>
+<ul>
+  {{#each shoppingCart.items as |item|}}
+    <li>
+      {{item.title}} -- ${{item.price}}
+      <button class="btn btn-sm btn-danger"{{action "removeFromCart" item}}>Remove </button>
+    </li>
+  {{/each}}
+</ul>
+<hr>
+<button class="btn btn-success" {{action "placeOrder"}}>Place Order</button>

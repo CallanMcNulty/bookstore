@@ -7,7 +7,8 @@ export default Ember.Component.extend({
         title: this.get('title'),
         author: this.get('author'),
         price: this.get('price'),
-        description: this.get('description')
+        description: this.get('description'),
+        picture: this.get('picture')
       };
       this.sendAction("save", params);
     }

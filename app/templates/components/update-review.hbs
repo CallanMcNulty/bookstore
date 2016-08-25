@@ -1,0 +1,17 @@
+{{#if reviewForm}}
+  <label>stars</label>
+  {{radio-button value='1' checked=selectedStar}}
+  {{radio-button value='2' checked=selectedStar}}
+  {{radio-button value='3' checked=selectedStar}}
+  {{radio-button value='4' checked=selectedStar}}
+  {{radio-button value='5' checked=selectedStar}}
+  <br>
+  <label>Write your review:</label>
+  <br>
+  {{textarea value=review.comment}}
+  <br>
+  <button class="btn btn-primary" {{action 'save' review}}>Save</button>
+  <button class="btn btn-danger" {{action 'deleteReview' review}}>Delete</button>
+{{else}}
+  <button class="btn btn-default"{{action 'reviewForm'}}>Update Review</button>
+{{/if}}

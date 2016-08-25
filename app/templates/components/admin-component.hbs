@@ -1,9 +1,11 @@
+<h3>Add a book to the inventory:</h3>
 {{#if formVisible}}
   {{new-book genre=selectedGenre save="save"}}
 {{else}}
   {{genre-list genres=genres chooseGenre="chooseGenre"}}
 {{/if}}
-
+<br>
+<h3>Pending orders:</h3>
 <ul>
   {{#each orders as |order|}}
     <li>
@@ -11,7 +13,7 @@
         {{book.book.title}} ${{book.book.price}},
       {{/each}}
       total: {{order.total}}
-      <button {{action "ship" order}}>order shipped</button>
+      <button class="btn btn-sm btn-primary"{{action "ship" order}}>order shipped</button>
     </li>
   {{/each}}
 </ul>

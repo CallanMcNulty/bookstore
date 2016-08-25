@@ -1,6 +1,21 @@
-<ul>{{#each sortedReviews as |review|}}<li>{{review.userName}} {{review.stars}} stars
-{{review.comment}} {{review.date}}</li>{{/each}}
-</ul>
+<button class="btn btn-default"{{action 'showReviews'}}>{{#if showReviews}}Hide{{else}}Show{{/if}} Reviews</button>
+{{#if showReviews}}
+<hr>
+{{#each sortedReviews as |review|}}
+  <img class="stars" src="img/starimage{{review.stars}}.png">
+  <br>
+  {{review.userName}} says:
+  <br>
+  {{review.comment}}
+  <br>
+  <br>
+  {{review.date}}
+  <br>
+  <br>
+  {{update-review review=review deleteReview="deleteReview"}}
+{{/each}}
+<hr>
+<h4>Write your own review</h4>
 <form>
   <label>user name</label>
   {{input value=userName id="userName"}}
@@ -10,7 +25,11 @@
   {{radio-button value='3' checked=selectedStar}}
   {{radio-button value='4' checked=selectedStar}}
   {{radio-button value='5' checked=selectedStar}}
+  <br>
   <label>Write your review:</label>
+  <br>
   {{textarea value=comment id="comment"}}
-  <button {{action 'save'}}>submit</button>
+  <br>
+  <button class="btn btn-default"{{action 'save'}}>submit</button>
 </form>
+{{/if}}

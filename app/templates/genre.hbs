@@ -1,4 +1,8 @@
-<h1>{{model.name}}</h1>
-
-{{#each model.books as |book|}}{{#link-to 'book' book.id}}{{book.title}}{{/link-to}}, by {{book.author}}
-{{/each}}
+<div class="container">
+  <h1>{{model.name}}</h1>
+  <ul>
+    {{#each model.books as |book|}}
+    <li>{{#link-to 'book' book.id}}{{book.title}}{{/link-to}} by {{book.author}}</li>
+    {{/each}}
+  </ul>
+</div>

@@ -1,0 +1,58 @@
+.navbar {
+  background-color: teal;
+}
+.navbar a {
+  color: white;
+}
+
+.jumbotron {
+  background-color: #b3d9ff;
+  color: darkgreen;
+}
+
+.navigation button{
+  margin: 1%;
+}
+
+.navigation {
+  background-color: teal;
+}
+
+textarea {
+  width: 500px;
+  height: 100px;
+  max-width: 500px;
+  max-height: 100px;
+}
+
+.stars {
+  max-width: 100px;
+  margin-bottom: 10px;
+}
+
+.row img {
+  max-height: 500px;
+}
+
+.tile {
+  margin-top: 30px;
+}
+
+.tile-col {
+  float: left;
+  margin-right: 30px;
+  margin-top: 30px;
+}
+
+.tile-col img {
+  max-height: 200px;
+}
+
+.tile img {
+  max-height: 300px;
+}
+
+.book-row {
+  overflow-y: hidden;
+  max-height: 250px;
+}

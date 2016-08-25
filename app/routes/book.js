@@ -26,6 +26,9 @@ export default Ember.Route.extend({
         return book.destroyRecord();
       });
       this.transitionTo('index');
+    },
+    deleteReview(review) {
+      review.destroyRecord();
     }
   },
 });

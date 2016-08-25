@@ -1,5 +1,6 @@
-<ul>
+<div class="text-center navigation">
   {{#each genres as |genre|}}
-    <li><button {{action "chooseGenre" genre}}>{{genre.name}}</button></li>
+
+  <button class="btn btn-default"{{action "chooseGenre" genre}}>{{genre.name}}</button>
   {{/each}}
-</ul>
+</div>

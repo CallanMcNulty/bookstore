@@ -1,9 +1,30 @@
+<div class="jumbotron">
+  <div class="container">
+    <h1>BOOKSTORE</h1>
+    <h2>Welcome to the Bookstore</h2>
+  </div>
+</div>
 {{genre-list genres=model.genres chooseGenre="chooseGenre"}}
+
+<div class="container">
+  {{book-tile books=model.books featured=true}}
+  <div class="book-row">
+    {{book-tile books=model.books featured=false}}
+    {{book-tile books=model.books featured=false}}
+    {{book-tile books=model.books featured=false}}
+    {{book-tile books=model.books featured=false}}
+    {{book-tile books=model.books featured=false}}
+    {{book-tile books=model.books featured=false}}
+    {{book-tile books=model.books featured=false}}
+    {{book-tile books=model.books featured=false}}
+    {{book-tile books=model.books featured=false}}
+  </div>
+</div>
 
 
   <!-- {{#each model.genres as |genre|}}{{genre.name}} |
   {{/each}} -->
-<p>
+<!-- <p>
   {{#each model.books as |book|}}{{book.title}}
   {{/each}}
-</p>
+</p> -->
