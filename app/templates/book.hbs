@@ -17,6 +17,9 @@
   </div>
 </div>
 <hr>
+{{#if model.average}}
+<img id="average" src="img/starimage{{model.average}}.png" alt="" />
+{{/if}}
 {{review-component save='save' book=model deleteReview="deleteReview"}}
 <br>
 {{update-book deleteBook='deleteBook' book=model}}

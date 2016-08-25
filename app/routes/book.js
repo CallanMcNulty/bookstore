@@ -12,8 +12,15 @@ export default Ember.Route.extend({
     save(params) {
       var review = this.store.createRecord('review', params);
       var book = params.book;
+      var reviewLength = 0;
+      var totalStars = 0;
       book.get('reviews').addObject(review);
-
+      book.get('reviews').forEach(function(review){
+        totalStars += parseInt(review.get('stars'));
+        reviewLength ++;
+      });
+      book.set('average', Math.floor(totalStars/reviewLength));
+      console.log(book.get('average'))
       review.save().then(function(){
         return book.save();
       });

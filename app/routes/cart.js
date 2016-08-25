@@ -7,7 +7,7 @@ export default Ember.Route.extend({
       var rt = this;
       var newOrder = rt.store.createRecord('order', {total: 0});
       rt.get("shoppingCart").get("items").forEach(function(item) {
-        newOrder.set("total", newOrder.get("total")+parseInt(item.get('price')));
+        newOrder.set("total", newOrder.get("total")+parseFloat(item.get('price')));
         var params = {
           book: item,
           order: newOrder

@@ -56,3 +56,8 @@ textarea {
   overflow-y: hidden;
   max-height: 250px;
 }
+#average {
+  float: right;
+  margin: 5px;
+  max-height: 50px;
+}
