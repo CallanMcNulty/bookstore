@@ -1,7 +1,6 @@
 # Bookstore
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This is an app which performs many of the functions of an online book store. Created for practice with the Ember framework and the Firebase database service.
 
 ## Prerequisites
 
